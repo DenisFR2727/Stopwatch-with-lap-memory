@@ -16,9 +16,6 @@ function Lap({ lap, format }: PropsWithChildren<TimeProps>) {
       lapRef.current.scrollTop = lapRef.current.scrollHeight;
     }
   }, [lap]);
-  useEffect(() => {
-    console.log(lap);
-  }, [lap]);
 
   const calculateTotalTime = (laps: ITime[], index: number): string => {
     let totalMilliseconds = 0;
