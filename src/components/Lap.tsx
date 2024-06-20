@@ -18,7 +18,7 @@ function Lap({ lap, format }: PropsWithChildren<TimeProps>) {
   }, [lap]);
 
   const calculateTotalTime = (laps: ITime[], index: number): string => {
-    let totalMilliseconds = 0;
+    let totalMilliseconds: number = 0;
     for (let i = 0; i <= index; i++) {
       totalMilliseconds += laps[i].hours * 3600000;
       totalMilliseconds += laps[i].minutes * 60000;
